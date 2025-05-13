@@ -208,7 +208,7 @@ public class TabChiTieu extends Fragment {
             /**LẤY TỔNG SÓ SỐ ĐÃ CHI THEO TỪNG PHÂN LOẠI*/
             for (File f : DanhsachPhanloaiDaTao) {
                 if (!f.getName().equals("Icon")) {
-                    bien_TongTienChi = LayDuLieu_Nam_Chi(f);
+                    bien_TongTienChi = LayTongSoTien_PhanLoai_Chi(f);
                     TinhTongChiTrongNam += LayDuLieu_Nam_Chi(f);
                     TinhTongChi = TinhTongChi + bien_TongTienChi;
                     File DataIcon = new File(modun.ChiTieu_Icon, f.getName().trim() + ".txt");
@@ -219,7 +219,7 @@ public class TabChiTieu extends Fragment {
                 }
             }
 
-            mainActivity.truyen_tvChi().setText((String.format("%,d", Long.parseLong(String.valueOf(Math.round(TinhTongChiTrongNam))))).replace(".", ",").replace(",", ","));
+            mainActivity.truyen_tvChi().setText((String.format("%,d", Long.parseLong(String.valueOf(Math.round(TinhTongChi))))).replace(".", ",").replace(",", ","));
 
             /**TÍNH PHẦN TRĂM*/
             entries = new ArrayList<>();
@@ -281,7 +281,19 @@ public class TabChiTieu extends Fragment {
         } else return 0;
         return tongsotien_chi;
     }
-
+    private double LayTongSoTien_PhanLoai_Chi(File duongDanPhanLoai) {
+        double tongsotien_chi = 0;
+        if (duongDanPhanLoai.isDirectory()) { /**KIỂM TRA CÓ PHẢI LÀ THƯ MỤC HAY KHÔNG*/
+            File[] DanhsachMucTieuDaTao = duongDanPhanLoai.listFiles();/**lấy danh sách mục tiêu chi*/
+            for (File f : DanhsachMucTieuDaTao) {
+                String data = modun.readText(f);
+                String[] mangData = data.split("@");
+                double sotien_Chi = Double.valueOf(mangData[2]);
+                tongsotien_chi = tongsotien_chi + sotien_Chi;
+            }
+        } else return 0;
+        return tongsotien_chi;
+    }
     private void DialogSuaTen(final int position) {
         final Dialog dialogthongso = new Dialog(getContext());
         dialogthongso.setContentView(R.layout.dialog_chinhsua);

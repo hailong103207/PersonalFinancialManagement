@@ -139,7 +139,7 @@ public class TabThuNhap extends Fragment {
             /**LẤY TỔNG SÓ SỐ ĐÃ CHI THEO TỪNG PHÂN LOẠI*/
             for (File f : DanhsachPhanloaiDaTao) {
                 if (!f.getName().equals("Icon")) {
-                    bien_TongTienChi = LayDuLieu_Nam_Thu(f);
+                    bien_TongTienChi = LayTongTien_PhanLoai_Thu(f);
                     TinhTongChi = TinhTongChi + bien_TongTienChi;
                     TinhTongChiTrongNam += LayDuLieu_Nam_Thu(f);
                     File DataIcon = new File(modun.ThuThap_Icon, f.getName().trim() + ".txt");
@@ -148,7 +148,7 @@ public class TabThuNhap extends Fragment {
                     danhsach_Phanloai.add(doituong_PhanLoai);
                 }
             }
-            mainActivity.truyen_tvThu().setText((String.format("%,d", Long.parseLong(String.valueOf(Math.round(TinhTongChiTrongNam))))).replace(".", ",").replace(",", ","));
+            mainActivity.truyen_tvThu().setText((String.format("%,d", Long.parseLong(String.valueOf(Math.round(TinhTongChi))))).replace(".", ",").replace(",", ","));
 
             /**TÍNH PHẦN TRĂM*/
             entries = new ArrayList<>();
@@ -209,7 +209,19 @@ public class TabThuNhap extends Fragment {
         } else return 0;
         return tongsotien_chi;
     }
-
+    private double LayTongTien_PhanLoai_Thu(File duongDanPhanLoai) {
+        double tongsotien_chi = 0;
+        if (duongDanPhanLoai.isDirectory()) { /**KIỂM TRA CÓ PHẢI LÀ THƯ MỤC HAY KHÔNG*/
+            File[] DanhsachMucTieuDaTao = duongDanPhanLoai.listFiles();/**lấy danh sách mục tiêu chi*/
+            for (File f : DanhsachMucTieuDaTao) {
+                String data = modun.readText(f);
+                String[] mangData = data.split("@");
+                double sotien_Chi = Double.valueOf(mangData[2]);
+                tongsotien_chi = tongsotien_chi + sotien_Chi;
+            }
+        } else return 0;
+        return tongsotien_chi;
+    }
     public void setAdapters() {
         if (VIEW_MODE_LISTVIEW == curnntView) {
             listViewAdapter = new ListviewAdapter(danhsach_Phanloai, getContext(), R.layout.list_item);
