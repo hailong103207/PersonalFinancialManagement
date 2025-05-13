@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="2000dp"
+        android:background="@drawable/back"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:id="@+id/imgHide"
+            android:background="@drawable/ic_person_add_black_24dp"
+            android:scaleType="fitXY" />
+        <!--Nhap-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Phân loại:"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_PhanLoai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/hinhcovienden"
+                android:textSize="20dp" />
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RadioButton
+                    android:id="@+id/radioTieuDung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:text="Ts tiêu dung"
+                    android:textColor="#fff"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radioDauTu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:layout_weight=".5"
+                    android:text="Ts đầu tư"
+                    android:textColor="#fff"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+                <RadioButton
+                    android:id="@+id/radioTienMat"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Ts tiền mặt"
+                    android:textColor="#fff"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/radioNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:text="Ts nợ"
+                    android:textColor="#fff"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnLuuThongSo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/kohinhvientrang"
+                    android:text="OK"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

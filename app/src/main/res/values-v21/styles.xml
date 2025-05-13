@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="android:Theme.Material.Light">
+        ....
+        <item name="android:datePickerDialogTheme">@style/MyDatePickerDialogTheme</item>
+    </style>
+    <style name="MyDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+    </style>
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
+
+        <item name="android:datePickerMode">spinner</item>
+        <item name="android:headerBackground">@color/colorPrimary</item>
+        <item name="android:calendarTextColor">@color/colorPrimary</item>
+        <item name="android:datePickerDialogTheme">@color/colorPrimary</item>
+        <item name="android:datePickerStyle">@color/colorPrimary</item>
+    </style>
+    <style name="MyDatePickerCalendarDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePickerStyleCalendar</item>
+    </style>
+    <style name="MyDatePickerStyleCalendar" parent="@android:style/Widget.Material.Light.DatePicker">
+
+        <item name="android:datePickerMode">calendar</item>
+        <item name="android:headerBackground">@color/colorPrimary</item>
+        <item name="android:calendarTextColor">@color/colorPrimary</item>
+        <item name="android:datePickerDialogTheme">@color/colorPrimary</item>
+        <item name="android:datePickerStyle">@color/colorPrimary</item>
+    </style>
+</resources>

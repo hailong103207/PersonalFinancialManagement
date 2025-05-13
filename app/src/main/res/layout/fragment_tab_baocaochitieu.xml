@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tabLichSuChiTieu">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/layoutSearch">
+        <SearchView
+            android:id="@+id/search_bar"
+            android:iconifiedByDefault="false"
+            android:background="@drawable/hinhcovienden"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:queryHint="Tìm kiếm"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/listview_MucTieu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

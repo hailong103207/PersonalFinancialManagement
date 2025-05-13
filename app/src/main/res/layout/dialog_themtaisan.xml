@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="2000dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Ngày:"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:gravity="left"
+                android:id="@+id/btn_NgayChi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/hinhcovienden"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Tên tài sản:"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/edt_MucTieuChi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/hinhcovienden"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Số tiền (.000 vnđ):"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:textColor="@color/colorPrimary2"
+                android:id="@+id/edt_SoTienChi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:hint="0đ"
+                android:maxLength="10"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:inputType="datetime"
+                android:background="@drawable/hinhcovienden"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="T.gian dự kiến ( năm ) :"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:textColor="@color/colorPrimary2"
+                android:id="@+id/edt_ThoiHanSuDung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:hint="tgian sử dụng dự kién"
+                android:maxLength="2"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:inputType="numberDecimal"
+                android:background="@drawable/hinhcovienden"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnLuuThongSo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/kohinhvientrang"
+            android:text="OK"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnThoat"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/kohinhvientrang"
+            android:text="THOÁT"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

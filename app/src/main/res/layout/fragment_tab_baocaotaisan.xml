@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tabLichSuChiTieu">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/hinhnentaisan"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Đầu kỳ"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:background="@drawable/backgound_color"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="1. Tổng ts đầu kỳ"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDauKyTC"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:text="100,000,000"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowDauKyTD"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="2. Tài sản tiêu dùng"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDauKyTD"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvDauKyTD"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowDauKyDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="3. Tài sản đầu tư"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDauKyDT"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvDauKyDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowDauKyTM"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="4. Tài sản tiền mặt"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDauKyTM"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvDauKyTM"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowDauKyNO"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="5. Vay, nợ"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDauKyNO"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvDauKyNO"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/hinhnentaisan"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Trong kỳ"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:background="@drawable/backgound_color"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="6. Thu - chi"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvThuChi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:text="100,000,000"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowKHDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="7. Khấu hao ts đầu tư"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvKHDT"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvKHDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:clickable="false"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowKHTD"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8. Khấu hao ts tiêu dùng"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvKHTD"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:clickable="false"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvKHTD"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowTMDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="9. Tiền mặt mua ts đầu tư"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTMDT"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvTMDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:clickable="false"
+
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowTMTD"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="10. Tiền mặt mua ts tiêu dùng"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTMTD"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvTMTD"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:clickable="false"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/hinhnentaisan"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Cuối kỳ"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowTD"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="11. Tài sản tiêu dùng"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCuoiKyTD"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvPhanLoaiTD"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="12. Tài sản đầu tư"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCuoiKyDT"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvPhanLoaiDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowTM"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="13. Tài sản tiền mặt"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCuoiKyTM"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvPhanLoaiTM"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnShowNO"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@drawable/backgound_color"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="14. Vay, nợ"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCuoiKyNO"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:text="100,000,000"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lvPhanLoaiNO"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:background="@drawable/backgound_color"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="15. Tổng ts theo tính toán (1+6+7+8)"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tvCuoiKyTTTC"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:text="100,000,000"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/backgound_color"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="16. Tổng tài sản theo kiểm kê"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:id="@+id/tvCuoiKyTC"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:text="100,000,000"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LichSuActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_marginLeft="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnTrangChu"
+                android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
+                />
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:paddingTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="Từ"/>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/tvTu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="---"/>
+            <TextView
+                android:paddingTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="  Đến  "/>
+            <TextView
+                android:paddingTop="2dp"
+                android:id="@+id/tvDen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="---"/>
+            <ImageButton
+                android:id="@+id/btnBoLoc"
+                android:layout_width="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_edit_black_24dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right"/>
+        </LinearLayout>
+        <SearchView
+            android:id="@+id/search_bar"
+            android:iconifiedByDefault="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:queryHint="Tìm kiếm"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

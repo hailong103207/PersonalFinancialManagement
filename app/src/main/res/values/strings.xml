@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Quản lý tài chính cá nhân</string>
+    <string name="tab_text_1">Chi tiêu</string>
+    <string name="tab_text_2">Thu nhập</string>
+    <string name="tab_text_4">Tài sản</string>
+    <string name="tab_text_3">Tất cả</string>
+    <string name="tab_text_5">Đầu kỳ</string>
+    <string name="tab_text_6">Cuối kỳ</string>
+    <string name="thongbao">Vui lòng nhập đúng phân loại</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_lich_su">LichSuActivity</string>
+</resources>

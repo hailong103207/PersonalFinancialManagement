@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="2000dp"
+        android:background="#C7FFC7"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Chọn ví"
+            android:textColor="#000"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+        <GridView
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:id="@+id/myGrid"
+            android:horizontalSpacing="5dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="15dp">
+        </GridView>
+        <Button
+            android:id="@+id/btnBoChon"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/kohinhvientrang"
+            android:text="Bỏ chọn ví"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+</ScrollView>

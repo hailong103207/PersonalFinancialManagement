@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/viewgroup"
+    tools:context=".XemViActivity"
+>
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="vertical"
+            android:elevation="10dp"
+            android:background="@drawable/header_panel">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:paddingTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18dp"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:text="Xem Ví"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="right">
+                    <ImageButton
+                        android:id="@+id/btnGird"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_view_module_black_24dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <SearchView
+                android:id="@+id/search_bar"
+                android:iconifiedByDefault="false"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/search_brackgound"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:queryHint="Tìm kiếm"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Hiện có: "
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvTongChi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="18dp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:text="200.000 vnđ"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ViewStub
+            android:id="@+id/stub_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inflatedId="@+id/showlayout"
+            android:layout="@layout/my_list_view"/>
+
+            <ViewStub
+                android:id="@+id/stub_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:inflatedId="@+id/showlayout"
+                android:layout="@layout/my_grid_view"/>
+            <ImageButton
+                android:id="@+id/btn_ThemVi"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_person_add_black_24dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

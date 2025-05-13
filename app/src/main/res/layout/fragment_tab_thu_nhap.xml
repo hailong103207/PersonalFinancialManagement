@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/viewgroup"
+    tools:context=".TabChiTieu">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/layoutSearch">
+            <SearchView
+                android:id="@+id/search_bar"
+                android:iconifiedByDefault="false"
+                android:background="@drawable/hinhcovienden"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:queryHint="Tìm kiếm"/>
+        </LinearLayout>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:visibility="gone"
+            android:id="@+id/chart1"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp" />
+        <ViewStub
+            android:id="@+id/stub_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:inflatedId="@+id/showlayout"
+            android:layout="@layout/my_list_view"/>
+
+        <ViewStub
+            android:id="@+id/stub_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:inflatedId="@+id/showlayout"
+            android:layout="@layout/my_grid_view"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight=".3"
+                android:background="@drawable/platform">
+                <ImageButton
+                    android:id="@+id/btnXemLichSu"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:background="@drawable/ic_remove_red_eye_black_24dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight=".3"
+                android:background="@drawable/platform">
+                <ImageButton
+                    android:id="@+id/btn_ThemHocSinh"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:background="@drawable/ic_add_black_24dp"/>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>
